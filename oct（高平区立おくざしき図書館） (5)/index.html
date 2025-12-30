@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OCT（高平区立おくざしき図書館）</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              serif: ['"Shippori Mincho"', 'serif'],
+              sans: ['"Shippori Mincho"', 'serif'],
+            },
+            colors: {
+              oct: {
+                50: '#f0f9ff',
+                100: '#e0f2fe',
+                200: '#bae6fd',
+                300: '#7dd3fc',
+                400: '#38bdf8',
+                500: '#0ea5e9',
+                600: '#0284c7',
+                700: '#0369a1',
+                800: '#075985',
+                900: '#0c4a6e',
+                950: '#082f49',
+              }
+            },
+            animation: {
+              'fade-in': 'fadeIn 0.5s ease-out',
+              'slide-up': 'slideUp 0.6s cubic-bezier(0.16, 1, 0.3, 1)',
+              'ken-burns': 'kenBurns 40s ease infinite alternate',
+            },
+            keyframes: {
+              fadeIn: { '0%': { opacity: '0' }, '100%': { opacity: '1' } },
+              slideUp: { '0%': { transform: 'translateY(30px)', opacity: '0' }, '100%': { transform: 'translateY(0)', opacity: '1' } },
+              kenBurns: { '0%': { transform: 'scale(1) translate(0, 0)' }, '100%': { transform: 'scale(1.2) translate(-2%, -2%)' } }
+            }
+          },
+        },
+      }
+    </script>
+    <style>
+      body { background-color: #fcfcfc; color: #0c4a6e; font-family: "Shippori Mincho", serif; }
+      h1, h2, h3, h4, .serif { font-family: "Shippori Mincho", serif; }
+      .rich-text { line-height: 2; color: #334155; }
+      .rich-text .rt-h1-style { font-size: 1.8em; font-weight: 700; color: #0c4a6e; border-bottom: 2px solid #0ea5e9; margin: 2em 0 1em; padding-bottom: 0.3em; }
+      .rich-text .rt-h2-style { font-size: 1.4em; font-weight: 700; background: #f1f5f9; padding: 0.8em 1.2em; border-left: 5px solid #0ea5e9; margin: 1.5em 0; border-radius: 4px; }
+      .rich-text .rt-box-info { background: #f0f9ff; border: 1px solid #bae6fd; padding: 1.5em; border-radius: 12px; margin: 1.5em 0; display: block; position: relative; }
+      .rich-text .rt-box-info::before { content: 'INFO'; position: absolute; top: -10px; left: 15px; background: #0ea5e9; color: white; font-size: 10px; padding: 2px 8px; border-radius: 4px; font-weight: bold; }
+      .rich-text .rt-box-warning { background: #fffbeb; border: 1px solid #fde68a; padding: 1.5em; border-radius: 12px; margin: 1.5em 0; color: #92400e; display: block; position: relative; }
+      .rich-text .rt-box-warning::before { content: 'ATTENTION'; position: absolute; top: -10px; left: 15px; background: #f59e0b; color: white; font-size: 10px; padding: 2px 8px; border-radius: 4px; font-weight: bold; }
+      .rich-text .rt-box-success { background: #f0fdf4; border: 1px solid #bbf7d0; padding: 1.5em; border-radius: 12px; margin: 1.5em 0; color: #166534; display: block; }
+      .rich-text .rt-box-quote { border-top: 1px solid #e2e8f0; border-bottom: 1px solid #e2e8f0; padding: 2em; margin: 2.5em 0; text-align: center; font-style: italic; position: relative; }
+      .rich-text .rt-box-quote::before { content: '“'; font-size: 4em; color: #e2e8f0; position: absolute; top: -0.2em; left: 0.5em; }
+      .rich-text .rt-marker-yellow { background: linear-gradient(transparent 60%, #fef08a 60%); font-weight: bold; }
+      .rich-text .rt-marker-pink { background: linear-gradient(transparent 60%, #fbcfe8 60%); font-weight: bold; }
+      .rich-text .rt-text-red { color: #dc2626; font-weight: bold; }
+      .rich-text .rt-text-blue { color: #2563eb; font-weight: bold; }
+      .rich-text .rt-text-lg { font-size: 1.25rem; font-weight: 700; color: #0c4a6e; }
+      ::-webkit-scrollbar { width: 8px; }
+      ::-webkit-scrollbar-track { background: #f8fafc; }
+      ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
+      ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "firebase/": "https://esm.sh/firebase@^12.7.0/",
+    "lucide-react": "https://esm.sh/lucide-react@^0.562.0",
+    "@google/genai": "https://esm.sh/@google/genai@^1.34.0",
+    "vite": "https://esm.sh/vite@^7.3.0",
+    "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^5.1.2"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
